@@ -1,8 +1,7 @@
-package com.example.buysell.services;
+package com.example.marketplace.services;
 
-import com.example.buysell.models.Product;
+import com.example.marketplace.models.Product;
 import org.springframework.stereotype.Service;
-import org.yaml.snakeyaml.events.Event;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +9,12 @@ import java.util.List;
 @Service
 public class ProductService {
     private List<Product> products = new ArrayList<>();
-    private int  ID =0;
+    private long ID =0;
     {
         products.add(new Product
-                (++ID,"Laptop",2345," black,small", 12.20, "Athens", "Tom" ));
+                (++ID,"Laptop"," black,small", 12.20, "Athens", "Tom" ));
         products.add(new Product
-                (++ID,"Phone",2344,"white,slim",234.60,"Rome","Inna"));
+                (++ID,"Phone","white,slim",234.60,"Rome","Inna"));
     }
     public List<Product> listProducts(){
         return products;

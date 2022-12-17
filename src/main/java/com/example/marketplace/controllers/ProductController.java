@@ -1,7 +1,7 @@
-package com.example.buysell.controllers;
+package com.example.marketplace.controllers;
 
-import com.example.buysell.models.Product;
-import com.example.buysell.services.ProductService;
+import com.example.marketplace.models.Product;
+import com.example.marketplace.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +17,10 @@ public class ProductController {
     @GetMapping("/")
     public String products(Model model) {
         model.addAttribute("products", productService.listProducts());
-        return "product";
+        return "products";
     }
     @GetMapping("/product/{id}")
-public String productInfo(@PathVariable Long id,Model model){
+    public String productInfo(@PathVariable Long id,Model model){
         model.addAttribute("product",productService.getProductById(id));
         return "product-info";
 }

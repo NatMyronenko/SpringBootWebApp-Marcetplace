@@ -1,4 +1,4 @@
-package com.example.buysell.models;
+package com.example.marketplace.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,6 @@ import lombok.Data;
 public class Product {
     private long id;
     private String title;
-    private int number;
     private String description;
     private double price;
     private String city;
