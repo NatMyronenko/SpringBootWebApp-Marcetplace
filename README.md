@@ -1,4 +1,7 @@
 # SpringBootWebApp-Marcetplace
+
+MAIN SETTINGS
+
 1>>>    Create here new project https://start.spring.io/ 
 
 <img width="283" alt="image" src="https://user-images.githubusercontent.com/108218207/208246686-ff5edaf0-b044-4097-81f8-199f2df35454.png">
