@@ -11,7 +11,6 @@
 <b>Description of product:</b>${product.description}<br>
 <b>Price product:</b>${product.price}<br>
 <b>City:</b>${product.city}<br>
-<b>Author Name:</b>${product.authorName}<br>
 <hr>
 <h3>Delete product</h3>
 <form action="/product/delete/${product.id}" method="post">
