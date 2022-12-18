@@ -14,6 +14,9 @@ Unzip the file and open In IntelliJ IDEA
 
 3>>>     To connect with DB PostgreSQL 
 
+
+#db all settings you can find inside of the code in <img width="129" alt="image" src="https://user-images.githubusercontent.com/108218207/208312656-63b9f9aa-743d-4054-9ab0-c5f5f0d43030.png">
+
 <img width="418" alt="image" src="https://user-images.githubusercontent.com/108218207/208312503-f6582865-5d68-4985-8ba7-e3dea20a956c.png">
 
 Where password is equals to password from PG Admin PostgreSQL
