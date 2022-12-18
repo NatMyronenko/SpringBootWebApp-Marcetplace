@@ -1,5 +1,5 @@
 # SpringBootWebApp-Marcetplace
-1>>> Create here new project https://start.spring.io/ 
+1>>>    Create here new project https://start.spring.io/ 
 
 <img width="283" alt="image" src="https://user-images.githubusercontent.com/108218207/208246686-ff5edaf0-b044-4097-81f8-199f2df35454.png">
 
@@ -12,6 +12,8 @@ Afrer press Generate
 2>>> <img width="112" alt="image" src="https://user-images.githubusercontent.com/108218207/208246741-d6a7230c-46fb-4940-9d65-798de0f4e982.png">
 Unzip the file and open In IntelliJ IDEA
 
-To connect with DB PostgreSQL 
+3>>>     To connect with DB PostgreSQL 
+
 <img width="418" alt="image" src="https://user-images.githubusercontent.com/108218207/208312503-f6582865-5d68-4985-8ba7-e3dea20a956c.png">
+
 Where password is equals to password from PG Admin PostgreSQL
