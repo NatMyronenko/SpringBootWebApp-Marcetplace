@@ -11,3 +11,7 @@ Afrer press Generate
 
 2>>> <img width="112" alt="image" src="https://user-images.githubusercontent.com/108218207/208246741-d6a7230c-46fb-4940-9d65-798de0f4e982.png">
 Unzip the file and open In IntelliJ IDEA
+
+To connect with DB PostgreSQL 
+<img width="418" alt="image" src="https://user-images.githubusercontent.com/108218207/208312503-f6582865-5d68-4985-8ba7-e3dea20a956c.png">
+Where password is equals to password from PG Admin PostgreSQL
