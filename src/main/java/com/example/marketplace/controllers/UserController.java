@@ -31,12 +31,7 @@ public class UserController {
             return "registration";
         }
         return "redirect:/login";
-
-//    @PostMapping("/registration")
-//    public String createUser(User user) {
-//        userService.createUser(user);
-//        return "redirect:/login";
-   }
+    }
 
     @GetMapping("/hello")
     public String securityUrl() {
