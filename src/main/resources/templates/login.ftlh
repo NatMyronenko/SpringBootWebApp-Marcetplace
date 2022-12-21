@@ -12,10 +12,6 @@
     <input type="hidden" name="_csrf" value="${_csrf.token}">
     <input type="submit" value="enter"/>
 </form>
-<<<<<<< HEAD
-<a href="/registration">Зарегистрировать ся</a>
-=======
 <a href="/registration">Зарегистрироваться</a>
->>>>>>> 6c58955 (updated)
 </body>
 </html>
