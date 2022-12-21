@@ -7,7 +7,7 @@
 <h1>MARKET PLACE |<a href="/login">Enter</a></h1><hr>
 <form action="/logout" method="post">
     <input type="hidden" name="_csrf" value="${_csrf.token}">
-    <input type="submit" value="logout">
+    <input type="submit" value="exit">
 </form>
 <h4>Products from all Europe</h4>
 <form action="/" method="get">

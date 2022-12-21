@@ -15,14 +15,13 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public boolean createUser(User user){
-       // String email = user.getEmail();
-        if (userRepository.findByEmail(user.getEmail()) !=null)
-            return false;
+    public boolean createUser(User user) {
+        String userEmail = user.getEmail();
+        if (userRepository.findByEmail(userEmail) != null) return false;
         user.setActive(true);
         user.getRoles().add(Role.ROLE_USER);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        log.info("Saving new user with email: {}", user.getEmail() );
+        log.info("Saving new User with email: {}", userEmail);
         userRepository.save(user);
         return true;
     }
