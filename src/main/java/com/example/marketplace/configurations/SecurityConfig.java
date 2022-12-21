@@ -16,16 +16,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomUserDetailsService userDetailsService;
 
+
     @Override
-    public void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/product/**","/images/**","/registration")
+                .antMatchers("/", "/product/**", "/images/**", "/registration","/user/**")
                 .permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .permitAll()
                 .and()
                 .logout()
                 .permitAll();
@@ -36,8 +38,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
     }
+
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(8);
     }
 }
+
