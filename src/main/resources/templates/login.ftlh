@@ -12,6 +12,6 @@
     <input type="hidden" name="_csrf" value="${_csrf.token}">
     <input type="submit" value="enter"/>
 </form>
-<a href="/registration">Зарегистрироваться</a>
+<a href="/registration">Зарегистрировать ся</a>
 </body>
 </html>
