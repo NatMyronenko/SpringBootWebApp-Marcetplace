@@ -7,13 +7,16 @@
 <h1>MARKET PLACE</h1>
 <hr>
 <#if user.email??>
-    <h3>Имя пользователя: <i>${user.name}</i></h3>
-    <form action="/logout" method="post">
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <input type="submit" value="exit">
-    </form>
+<h3>Имя пользователя: <i>${user.name}</i></h3>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="exit">
+</form>
+<#if user.isAdmin()>
+<a href="/admin">Administrator panel</a>
+</#if>
 <#else>
-    <a href="/login">Enter</a></h1>
+<a href="/login">Enter</a></h1>
 </#if>
 <hr>
 <h4>Products from all Europe</h4>
@@ -22,26 +25,26 @@
     <input type="submit" value="search"/>
 </form>
 <#list products as product>
-    <div>
-        <p><b>${product.title}</b> ${product.price} Eur | <a href="/product/${product.id}">More information... </a>
-    </div>
+<div>
+    <p><b>${product.title}</b> ${product.price} Eur | <a href="/product/${product.id}">More information... </a>
+</div>
 <#else>
-    <h3>no products</h3>
+<h3>no products</h3>
 </#list>
 <#if user.email??>
-    <hr>
-    <h3>Create new product</h3>
-    <form action="/product/create" method="post" enctype="multipart/form-data">
-        Title ad: <input type="text" name="title"/><br><br>
-        Ad description:<input type="text" name="description"/><br><br>
-        Price ad: <input type="number" name="price"/><br><br>
-        City ad: <input type="text" name="city"/><br><br>
-        First photo: <input type="file" name="file1"/><br><br>
-        Second Photo: <input type="file" name="file2"/><br><br>
-        Third Photo: <input type="file" name="file3"/><br><br>
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <input type="submit" value="add product"/>
-    </form>
+<hr>
+<h3>Create new product</h3>
+<form action="/product/create" method="post" enctype="multipart/form-data">
+    Title ad: <input type="text" name="title"/><br><br>
+    Ad description:<input type="text" name="description"/><br><br>
+    Price ad: <input type="number" name="price"/><br><br>
+    City ad: <input type="text" name="city"/><br><br>
+    First photo: <input type="file" name="file1"/><br><br>
+    Second Photo: <input type="file" name="file2"/><br><br>
+    Third Photo: <input type="file" name="file3"/><br><br>
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="add product"/>
+</form>
 </#if>
 </body>
 </html>
