@@ -1,6 +1,7 @@
 package com.example.marketplace.models;
 
 import com.example.marketplace.models.enums.Role;
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
