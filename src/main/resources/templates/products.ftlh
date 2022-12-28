@@ -1,50 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>MARKET PLACE</title>
-</head>
-<body>
-<h1>MARKET PLACE</h1>
-<hr>
-<#if user.email??>
-<h3>Имя пользователя: <i>${user.name}</i></h3>
-<form action="/logout" method="post">
-    <input type="hidden" name="_csrf" value="${_csrf.token}">
-    <input type="submit" value="exit">
-</form>
-<#if user.isAdmin()>
-<a href="/admin">Administrator panel</a>
-</#if>
-<#else>
-<a href="/login">Enter</a></h1>
-</#if>
-<hr>
-<h4>Products from all Europe</h4>
-<form action="/" method="get">
-    Search by product name: <input type="text" name="title">
-    <input type="submit" value="search"/>
-</form>
-<#list products as product>
-<div>
-    <p><b>${product.title}</b> ${product.price} Eur | <a href="/product/${product.id}">More information... </a>
-</div>
-<#else>
-<h3>no products</h3>
-</#list>
-<#if user.email??>
-<hr>
-<h3>Create new product</h3>
-<form action="/product/create" method="post" enctype="multipart/form-data">
-    Title ad: <input type="text" name="title"/><br><br>
-    Ad description:<input type="text" name="description"/><br><br>
-    Price ad: <input type="number" name="price"/><br><br>
-    City ad: <input type="text" name="city"/><br><br>
-    First photo: <input type="file" name="file1"/><br><br>
-    Second Photo: <input type="file" name="file2"/><br><br>
-    Third Photo: <input type="file" name="file3"/><br><br>
-    <input type="hidden" name="_csrf" value="${_csrf.token}">
-    <input type="submit" value="add product"/>
-</form>
-</#if>
-</body>
-</html>
+<#import "blocks/template.ftlh" as t>
+<@t.template user>
+    <h1 style="text-align: center">Product search</h1><hr>
+    <form method="get" action="/">
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="searchCity">City</label>
+                <select id="searchCity" class="form-control">
+                    <option value="">City not selected</option>
+                    <option value="Oslo">Oslo</option>
+                    <option value="Bergen">Bergen</option>
+                    <option value="Drammen">Drammen</option>
+                </select>
+            </div>
+            <div class="form-group col-md-10">
+                <label for="searchWord">Search my ads</label>
+                <input type="text" name="searchWord" <#if searchWord??>value="${searchWord}"</#if> class="form-control"
+                       id="searchWord">
+            </div>
+            <button style="width: 100%" type="submit" class="btn btn-dark">Search</button>
+        </div>
+    </form>
+    <hr>
+    <div class="card-columns">
+        <#list products as product>
+            <a href="/product/${product.id}" class="product-link">
+                <div class="card text-white bg-dark my-3 product">
+
+                    <img src="/images/${product.previewImageId}"
+                         class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.title}</h5>
+                        <p class="card-text">${product.price} ₽</p>
+                    </div>
+                    <div class="card-footer">
+                        ${product.city}
+                    </div>
+                </div>
+            </a>
+        <#else>
+            <h1 style="text-align: center">Not found</h1>
+        </#list>
+    </div>
+</@t.template>
