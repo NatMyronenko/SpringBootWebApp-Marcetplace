@@ -1,5 +1,19 @@
 # SpringBootWebApp-Marcetplace
 
+Easy functionality of this application:
+->>registartion of an admin role or user;
+->>adding and deleting photos and product data;
+->>viewing a personal account;
+->>viewing and managing the admin panel.
+
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/108218207/209668606-200c8561-d623-46e9-a1a3-e8aa4e36384a.png">
+<img width="739" alt="image" src="https://user-images.githubusercontent.com/108218207/209668660-04ee359f-6f0f-49d4-b901-3320aec29233.png">
+<img width="364" alt="image" src="https://user-images.githubusercontent.com/108218207/209668700-f45ff1c7-182d-412d-96ff-917d921085c9.png">
+<img width="311" alt="image" src="https://user-images.githubusercontent.com/108218207/209668738-d220b200-c4b7-45df-b867-7c2f6837701e.png">
+<img width="889" alt="image" src="https://user-images.githubusercontent.com/108218207/209668765-5994b01e-aa6f-45ee-b931-957b5b59da8a.png">
+
+
+
 MAIN SETTINGS
 
 1>>>    Create here new project https://start.spring.io/ 
