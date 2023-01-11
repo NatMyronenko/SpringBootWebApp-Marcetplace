@@ -1,5 +1,6 @@
 package com.example.marketplace.models;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ public class Product {
     @Column(name = "description", columnDefinition = "text")
     private String description;
     @Column(name = "price")
+    @NotNull
     private int price;
     @Column(name = "city")
     private String city;
