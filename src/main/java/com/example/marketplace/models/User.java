@@ -1,7 +1,7 @@
 package com.example.marketplace.models;
 
 import com.example.marketplace.models.enums.Role;
-import lombok.Builder;
+import com.sun.istack.NotNull;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,10 +19,13 @@ public class User implements UserDetails {
     @Column(name = "id")
     private Long id;
     @Column(name = "name")
+    @NotNull
     private String name;
     @Column(name = "phone", unique = true)
+
     private String phone;
     @Column(name = "email", unique = true)
+    @NotNull
     private String email;
     @Column(name = "active")
     private boolean active;
